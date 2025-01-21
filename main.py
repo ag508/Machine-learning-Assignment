@@ -9,7 +9,6 @@ from nltk.tokenize import word_tokenize
 import re
 import random
 
-# Download all required NLTK data
 def download_nltk_data():
     resources = ['punkt', 'stopwords', 'averaged_perceptron_tagger']
     for resource in resources:
@@ -19,7 +18,6 @@ def download_nltk_data():
             print(f'Downloading {resource}...')
             nltk.download(resource, quiet=True)
 
-# Download NLTK data at startup
 print("Initializing NLTK resources...")
 download_nltk_data()
 
@@ -53,10 +51,10 @@ class DataPreprocessor:
         """Clean and normalize text using basic preprocessing."""
         if not isinstance(text, str):
             return ""
-        # Simple text cleaning without tokenization
+
         text = text.lower()
         text = re.sub(r'[^\w\s]', ' ', text)
-        text = ' '.join(text.split())  # Remove extra whitespace
+        text = ' '.join(text.split()) 
         return text
     
     def preprocess_job_data(self, jobs_df):
