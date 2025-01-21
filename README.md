@@ -29,27 +29,13 @@ scikit-learn
 nltk
 ```
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/job-recommendation-system.git
-cd job-recommendation-system
-```
-
-2. Install required packages:
-```bash
-pip install pandas numpy scikit-learn nltk
-```
-
-3. The system will automatically download required NLTK data on first run
 
 ## Usage
 
 Run the main script to see the system in action:
 
 ```bash
-python job_recommendation.py
+python main.py
 ```
 
 The demo will:
